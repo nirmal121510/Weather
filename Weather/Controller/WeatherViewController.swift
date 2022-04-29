@@ -49,7 +49,7 @@ class WeatherViewController: UITableViewController {
     
     @objc func fetchWeather() {
         changeSpinnerState(true)
-        dataSource?.fetchWeather(.bangalore) { [weak self] in
+        dataSource?.fetchWeather(.chennai) { [weak self] in
             guard let weakSelf = self else { return }
             weakSelf.changeSpinnerState(false)
             weakSelf.refreshControl?.endRefreshing()
